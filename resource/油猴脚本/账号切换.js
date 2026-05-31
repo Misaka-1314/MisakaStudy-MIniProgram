@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         微信小程序快捷切换账号
 // @namespace    https://mp.weixin.qq.com/
-// @version      1.0.1
+// @version      1.0.2
 // @author       Misaka
 // @match        https://mp.weixin.qq.com/wxamp/*
 // @grant        none
@@ -20,11 +20,11 @@ const toFormData = (obj) => Object.keys(obj)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(obj[key]))
     .join("&");
 
+const 切换后跳转页面 = "https://mp.weixin.qq.com/wxamp/index/index?lang=zh_CN&token=9259533";
+
 const 获取小程序列表 = () => {
     const random = Math.random();
     const token = getQueryParam("token");
-    localStorage.setItem("_misaka_当前页面", window.location.href);
-    localStorage.setItem("_misaka_切换开关", "1");
 
     return new Promise(resolve => {
         fetch(`https://mp.weixin.qq.com/wxamp/cgi/getWxaList?token=${token}&lang=zh_CN&random=${random}`)
@@ -44,23 +44,11 @@ const 切换账号 = (username) => {
     const item = Array.from(items).find(item => item.querySelector(".account_email").innerText === username);
     console.info("找到账号元素", item);
     item.click();
+    window.location.href = 切换后跳转页面;
 }
 
 (async () => {
     "use strict";
-
-    const 切换开关 = localStorage.getItem("_misaka_切换开关");
-    if (切换开关 == "1") {
-        const token = getQueryParam("token");
-        const 旧页面 = localStorage.getItem("_misaka_当前页面");
-        const url = new URL(旧页面);
-        url.searchParams.set("token", token);
-        const 新页面 = url.toString();
-        localStorage.setItem("_misaka_切换开关", "0");
-        window.location.href = 新页面;
-        return;
-    }
-
 
     const 小程序列表 = await 获取小程序列表();
 
