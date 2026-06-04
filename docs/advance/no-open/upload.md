@@ -35,15 +35,17 @@ import UploadResult from '../../.vitepress/components/UploadResult.vue';
 :::
 
 <style>
-@media (min-width: 960px) {
-  .only-mobile {
-    display: none;
-  }
+.only-mobile {
+  display: none;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 767px) {
+  .only-mobile {
+    display: block;
+  }
+
   .only-desktop {
-    display: none !important;
+    display: none;
   }
 }
 </style>

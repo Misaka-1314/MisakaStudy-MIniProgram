@@ -9,5 +9,5 @@ import ImageUpload from '../.vitepress/components/ImageUpload.vue'
 :::
 
 <ClientOnly>
-    <ImageUpload />
+  <ImageUpload />
 </ClientOnly>

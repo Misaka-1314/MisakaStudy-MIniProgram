@@ -6,4 +6,4 @@
 
 |                                   第一步                                  |                                  第二步                                 |                                  第三步                                   |
 | :----------------------------------------------------------------------: | :---------------------------------------------------------------------: | :----------------------------------------------------------------------: |
-| <img src="/image/official/实名-1.jpg" style="width: min(60vw, 300px)" /> | <img src="/image/official/实名-2.jpg" style="width: min(60vw, 300px)" /> | <img src="/image/official/实名-3.jpg" style="width: min(60vw, 300px)" /> |
+| <img src="/image/official/实名-1.png" style="width: min(60vw, 300px)" /> | <img src="/image/official/实名-2.png" style="width: min(60vw, 300px)" /> | <img src="/image/official/实名-3.png" style="width: min(60vw, 300px)" /> |

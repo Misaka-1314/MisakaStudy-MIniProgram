@@ -74,13 +74,15 @@ Misaka 会定期检查确保小程序未经篡改，如你发现异常，请及�
 </div>
 
 <style>
-@media (min-width: 960px) {
-  .only-mobile {
-    display: none;
-  }
+.only-mobile {
+  display: none;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 767px) {
+  .only-mobile {
+    display: block;
+  }
+
   .only-desktop {
     display: none !important;
   }

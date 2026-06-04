@@ -69,7 +69,7 @@ https://pan-yz.chaoxing.com
         baiduMapKey: '', // 百度地图开发平台
         tianMapKey: '', // 天地图开放平台
 
-        notice: "本小程序由公众号御坂网络Misaka免费提供，谨防倒卖！",
+        notice: "本小程序开源版由公众号御坂网络Misaka免费提供，谨防倒卖！",
         
         swiperList: [
             "/static/swiper/1.png",

@@ -34,6 +34,11 @@
             "source": "/advance/no-open.html",
             "destination": "/advance/no-open/develop.html",
             "statusCode": 301
+        },
+        {
+            "source": "/favicon.ico",
+            "destination": "/logo.png",
+            "statusCode": 301
         }
     ]
 }

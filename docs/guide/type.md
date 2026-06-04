@@ -4,7 +4,7 @@
 
 打开学习通 App 的聊天页，课程是绿色图标，班级是黄色图标，群聊是学生头像拼接。
 
-<img src="/image/guide/分辨签到类型.jpg" style="width: min(60vw, 300px)" />
+<img src="/image/guide/分辨签到类型.png" style="width: min(60vw, 300px)" />
 
 ::: details 怎么签？
 
@@ -19,7 +19,7 @@
 
 ## 课程签到的类型
 
-![签到类型辨别](/image/guide/发布签到类型.jpg)
+![签到类型辨别](/image/guide/发布签到类型.png)
 
 #### 1. 二维码签到
 
