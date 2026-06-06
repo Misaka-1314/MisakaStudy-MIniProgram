@@ -40,7 +40,7 @@ export default defineConfig({
         socialLinks: [
             {
                 icon: 'github',
-                link: 'https://github.com/Misaka-1314/Chaoxing-MIniProgram'
+                link: 'https://github.com/Misaka-1314/MisakaStudy-MIniProgram'
             }
         ],
         outline: false,
@@ -55,11 +55,11 @@ export default defineConfig({
                 items: [
                     {
                         text: '许可证',
-                        link: 'https://github.com/Misaka-1314/Chaoxing-MiniProgram/blob/main/LICENSE'
+                        link: 'https://github.com/Misaka-1314/MisakaStudy-MIniProgram/blob/main/LICENSE'
                     },
                     {
                         text: '参与贡献',
-                        link: 'https://github.com/Misaka-1314/Chaoxing-MiniProgram/blob/main/CODE_OF_CONDUCT.md'
+                        link: 'https://github.com/Misaka-1314/MisakaStudy-MIniProgram/blob/main/CODE_OF_CONDUCT.md'
                     }
                 ]
             }
@@ -84,7 +84,7 @@ export default defineConfig({
         },
         editLink: {
             text: '在 GitHub 上编辑此页',
-            pattern: 'https://github.com/Misaka-1314/Chaoxing-MIniProgram/edit/main/docs/:path'
+            pattern: 'https://github.com/Misaka-1314/MisakaStudy-MIniProgram/edit/main/docs/:path'
         },
         sidebar: [{
             text: '用户签到指南',

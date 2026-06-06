@@ -2,10 +2,10 @@
 
 <img src="https://github.com/Misaka-1314.png" width="300" height="300" style="border-radius: 50%"></img>
 
-<img alt="stars" src="https://img.shields.io/github/stars/Misaka-1314/Chaoxing-MiniProgram.svg?style=for-the-badge&label=Stars&logo=undertale&logoColor=orange&color=orange"/></img>
-<img alt="forks" src="https://img.shields.io/github/forks/Misaka-1314/Chaoxing-MiniProgram.svg?style=for-the-badge&label=Forks&logo=stackshare&logoColor=f92f60&color=f92f60"/></img>
-<img alt="pr" src="https://img.shields.io/github/issues-pr-closed/Misaka-1314/Chaoxing-MiniProgram.svg?style=for-the-badge&label=PR&logo=addthis&logoColor=green&color=0AC18E"/></img>
-<img alt="issues" src="https://img.shields.io/github/issues/Misaka-1314/Chaoxing-MiniProgram.svg?style=for-the-badge&label=Issues&logo=openbugbounty&logoColor=e38dff&color=e38dff"/></img>
+<img alt="stars" src="https://img.shields.io/github/stars/Misaka-1314/MisakaStudy-MIniProgram.svg?style=for-the-badge&label=Stars&logo=undertale&logoColor=orange&color=orange"/></img>
+<img alt="forks" src="https://img.shields.io/github/forks/Misaka-1314/MisakaStudy-MIniProgram.svg?style=for-the-badge&label=Forks&logo=stackshare&logoColor=f92f60&color=f92f60"/></img>
+<img alt="pr" src="https://img.shields.io/github/issues-pr-closed/Misaka-1314/MisakaStudy-MIniProgram.svg?style=for-the-badge&label=PR&logo=addthis&logoColor=green&color=0AC18E"/></img>
+<img alt="issues" src="https://img.shields.io/github/issues/Misaka-1314/MisakaStudy-MIniProgram.svg?style=for-the-badge&label=Issues&logo=openbugbounty&logoColor=e38dff&color=e38dff"/></img>
 
 </div></center>
 
@@ -15,7 +15,7 @@
 
 </div></center>
 
-<div align="center" style="font-weight:bold"><b>学习通快捷签到 自建微信小程序，签到如此简单！<a href="https://doc.micono.eu.org">阅读文档</a></b></div>  
+<div align="center"><b>学习通快捷签到 自建微信小程序，签到如此简单！<a href="https://doc.micono.eu.org">阅读文档</a></b></div>
 
 ## ✨ 历程
 
@@ -54,17 +54,15 @@
 
 #### 开源版
 
-|                                                        **登录页**                                                        |                                                      **课程列表页**                                                      |                                                      **签到列表页**                                                      |                                                      **定位签到页**                                                      |                                                      **拍照签到页**                                                      |
-| :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
-| <div align="center"> <img src="https://github.com/user-attachments/assets/4e7bbb6b-cde4-4767-860b-f33c4a9fdb9c"/> </div> | <div align="center"> <img src="https://github.com/user-attachments/assets/f7179f80-e0cc-4eb8-bd8e-89b9465fa088"/> </div> | <div align="center"> <img src="https://github.com/user-attachments/assets/1c201277-8374-496f-b986-ea84a1fd659a"/> </div> | <div align="center"> <img src="https://github.com/user-attachments/assets/126dd771-215b-4f6d-a95a-d0c191398b1d"/> </div> | <div align="center"> <img src="https://github.com/user-attachments/assets/dfeab9f7-b155-4514-9519-2a8caf7dae44"/> </div> |
+| **登录页** | **课程列表页** | **签到列表页** | **签到页** |
+| :---: | :---: | :---: | :---: |
+| <img src="https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MiniProgram/main/docs/public/image/guide/界面展示/开源版/01.png"/> | <img src="https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MiniProgram/main/docs/public/image/guide/界面展示/开源版/02.png"/>| <img src="https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MiniProgram/main/docs/public/image/guide/界面展示/开源版/03.png"/> | <img src="https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MiniProgram/main/docs/public/image/guide/界面展示/开源版/04.png"/> |
 
 #### 非开源版
 
-|                                                         **首页**                                                         |                                                        **登录页**                                                        |                                                    **批量扫码签到页**                                                    |                                                      **课程列表页**                                                      |                                                     **签到列表页**                                                      |                                                      **手势签到页**                                                      |                                                      **拍照签到页**                                                      |                                                      **定位签到页**                                                      |
-| :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
-| <div align="center"> <img src="https://github.com/user-attachments/assets/6d354e43-6a51-4e70-8d3c-e8b53d52e625"/> </div> | <div align="center"> <img src="https://github.com/user-attachments/assets/71ef9c44-309b-489e-9ef7-4f08e3840d91"/> </div> | <div align="center"> <img src="https://github.com/user-attachments/assets/d73b4df3-c43f-4a6a-8f38-46e661654652"/> </div> | <div align="center"> <img src="https://github.com/user-attachments/assets/fb7c4141-330c-483e-8c1f-2461e0361bfb"/> </div> | <div align="center"> <img src="https://github.com/user-attachments/assets/b3bbd3b8-d359-4c2a-be7d-aa3bce4c47f9"/> </div> | <div align="center"> <img src="https://github.com/user-attachments/assets/e2539952-d160-48ab-a99b-1e70234f16b6"/> </div> | <div align="center"> <img src="https://github.com/user-attachments/assets/63f9c939-7334-4c0b-8efd-d7a3db6d09cf"/> </div> | <div align="center"> <img src="https://github.com/user-attachments/assets/6807e267-10bd-49c0-9ea7-69b778ab5556"/> </div> |
-
-[更多界面截屏](//github.com/Misaka-1314/MisakaStudy-MIniProgram/tree/main/docs/public/image/guide/界面展示)
+| **小程序首页** | **签到首页** | **课程列表** | **签到列表** | **签到页** | **账号管理** |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| <img src="https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MiniProgram/main/docs/public/image/guide/界面展示/非开源版/02.png"/> | <img src="https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MiniProgram/main/docs/public/image/guide/界面展示/非开源版/03.png"/> | <img src="https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MiniProgram/main/docs/public/image/guide/界面展示/非开源版/10.png"/> | <img src="https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MiniProgram/main/docs/public/image/guide/界面展示/非开源版/06.png"/> | <img src="https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MiniProgram/main/docs/public/image/guide/界面展示/非开源版/09.png"/> | <img src="https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MiniProgram/main/docs/public/image/guide/界面展示/非开源版/11.png"/> |
 
 ## 🎉 版本对比
 
@@ -125,7 +123,7 @@
     <tr>
         <td rowspan="2">其他差异</td>
         <td>滑块验证码</td>
-        <td><a href="https://github.com/Misaka-1314/Chaoxing-MiniProgram/blob/39c95d5b4a20ce4e8b4f8e3ed7bd038cc15b4490/miniprogram/pages/home/home.js#L165">可接入免费接口</a></td>
+        <td><a href="https://github.com/Misaka-1314/MisakaStudy-MIniProgram/blob/39c95d5b4a20ce4e8b4f8e3ed7bd038cc15b4490/miniprogram/pages/home/home.js#L165">可接入免费接口</a></td>
         <td>支持自动通过</td>
         <td>支持自动通过</td>
     </tr>
@@ -137,7 +135,7 @@
     </tr>
     <tr>
         <td colspan="2">使用方式 / 用户协议</td>
-        <td><a href="https://github.com/Misaka-1314/Chaoxing-MiniProgram/blob/main/LICENSE">GPLv3许可证</a></td>
+        <td><a href="https://github.com/Misaka-1314/MisakaStudy-MIniProgram/blob/main/LICENSE">GPLv3许可证</a></td>
         <td colspan="2">原则上仅供您和朋友使用，禁止倒卖/滥用</td>
     </tr>
     <tr>
@@ -162,7 +160,7 @@
     </tr>
 </table>
 
-> 请注意：GPLv3 具有“传染性”，即在您开发的软件中使用 GPLv3 自由软件的整体或部分，都将使您的软件也变成 GPLv3 自由软件。
+> 请注意：GPLv3 具有"传染性"，即在您开发的软件中使用 GPLv3 自由软件的整体或部分，都将使您的软件也变成 GPLv3 自由软件。
 
 ## 🏆 更多信息
 

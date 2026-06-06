@@ -8,8 +8,8 @@
 // @match        https://i.chaoxing.com/*
 // @match        https://mobilelearn.chaoxing.com/page/sign/endSign*
 // @match        https://sso.chaoxing.com/apis/login/userLogin4Uname.do?misaka-referer=*
-// @updateURL    https://raw.githubusercontent.com/Misaka-1314/Chaoxing-MiniProgram/refs/heads/main/resource/油猴脚本/超星网页助手.js
-// @downloadURL  https://raw.githubusercontent.com/Misaka-1314/Chaoxing-MiniProgram/refs/heads/main/resource/油猴脚本/超星网页助手.js
+// @updateURL    https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MIniProgram/refs/heads/main/resource/油猴脚本/超星网页助手.js
+// @downloadURL  https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MIniProgram/refs/heads/main/resource/油猴脚本/超星网页助手.js
 // @author       Misaka-1314
 // @icon         https://im.chaoxing.com/favicon.ico
 // @grant        GM_setValue

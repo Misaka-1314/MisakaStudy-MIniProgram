@@ -16,7 +16,7 @@ hero:
       link: /advance/no-open/develop
     - theme: alt
       text: GitHub 仓库 🌱
-      link: https://github.com/Misaka-1314/Chaoxing-MiniProgram
+      link: https://github.com/Misaka-1314/MisakaStudy-MIniProgram
 
 features:
   - title: ⚡️ 极致轻量

@@ -11,10 +11,10 @@
 
 > 注意：Worker默认的域名已被墙，请自备域名；已知部分沿海城市阻断了CF的IP。
 
-[![使用 Cloudflare Workers 部署](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Misaka-1314/Chaoxing-MiniProgram/tree/main/server/cloudflare)
+[![使用 Cloudflare Workers 部署](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Misaka-1314/MisakaStudy-MIniProgram/tree/main/server/cloudflare)
 
 请修改根目录为 `server/cloudflare`。
-如果部署有问题，请自行复制代码粘贴到 Cloudflare Workers！[去复制代码](https://github.com/Misaka-1314/Chaoxing-MiniProgram/blob/main/server/cloudflare/_worker.js)
+如果部署有问题，请自行复制代码粘贴到 Cloudflare Workers！[去复制代码](https://github.com/Misaka-1314/MisakaStudy-MIniProgram/blob/main/server/cloudflare/_worker.js)
 :::
 
 ::: details 使用腾讯云 EdgeOne Pages
@@ -22,7 +22,7 @@
 :::
 
 ::: details 使用腾讯云 EdgeOne 边缘函数
-请自行复制代码粘贴到 EdgeOne 边缘函数！[去复制代码](https://github.com/Misaka-1314/Chaoxing-MiniProgram/blob/main/server/edgeone/_worker.js)
+请自行复制代码粘贴到 EdgeOne 边缘函数！[去复制代码](https://github.com/Misaka-1314/MisakaStudy-MIniProgram/blob/main/server/edgeone/_worker.js)
 :::
 
 ## 使用 Web 服务器反代

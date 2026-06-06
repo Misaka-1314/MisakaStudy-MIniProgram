@@ -47,6 +47,14 @@ const filteredList = computed(() => {
   return filtered.slice(start, end);
 })
 
+const getFailReason = (data) => {
+  const logs = (data.upload_logs || '').toLowerCase();
+  if (logs.includes('invalid ip')) {
+    return '未关闭IP白名单';
+  }
+  return null;
+};
+
 const columns = [
   {
     title: '序号',
@@ -67,6 +75,16 @@ const columns = [
     key: 'version',
     align: 'center',
     width: 150,
+    render: row => {
+      if (row.version) return row.version;
+      const reason = getFailReason(row);
+      return h(NSpace, { size: 'small', align: 'center', justify: 'center' }, {
+        default: () => [
+          h(NTag, { type: 'error', size: 'small' }, { default: () => '上传失败' }),
+          reason ? h(NText, { type: 'error', depth: 3, style: { fontSize: '12px' } }, { default: () => reason }) : null,
+        ]
+      });
+    }
   },
   {
     title: 'Secret',
@@ -134,8 +152,17 @@ const columns = [
                                 : null,
                             ]
                           })
-                          : h(NTag, { type: 'error', size: 'small' }, {
-                            default: () => '上传失败'
+                          : h(NSpace, { size: 'small', align: 'center' }, {
+                            default: () => [
+                              h(NTag, { type: 'error', size: 'small' }, {
+                                default: () => '上传失败'
+                              }),
+                              getFailReason(data)
+                                ? h(NText, { type: 'error', style: { fontSize: '12px' } }, {
+                                  default: () => getFailReason(data)
+                                })
+                                : null,
+                            ]
                           })
                       },
                       { label: '手机号', value: data.mobile || '隐藏' },

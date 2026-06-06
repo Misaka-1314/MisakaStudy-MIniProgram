@@ -8,8 +8,8 @@
 // @grant        GM_getValue
 // @grant        GM_deleteValue
 // @grant        GM_listValues
-// @updateURL    https://raw.githubusercontent.com/Misaka-1314/Chaoxing-MiniProgram/refs/heads/main/resource/油猴脚本/一键提审.js
-// @downloadURL  https://raw.githubusercontent.com/Misaka-1314/Chaoxing-MiniProgram/refs/heads/main/resource/油猴脚本/一键提审.js
+// @updateURL    https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MIniProgram/refs/heads/main/resource/油猴脚本/一键提审.js
+// @downloadURL  https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MIniProgram/refs/heads/main/resource/油猴脚本/一键提审.js
 // ==/UserScript==
 
 // 获取 remark 的函数

@@ -64,7 +64,7 @@ https://pan-yz.chaoxing.com
     ```js
     const config = {
         baseUrl: "https://example.com/proxy",
-        repository: "Misaka-1314/Chaoxing-WechatMiniProgram", // 开源仓库地址
+        repository: "Misaka-1314/MisakaStudy-MiniProgram", // 开源仓库地址
 
         baiduMapKey: '', // 百度地图开发平台
         tianMapKey: '', // 天地图开放平台

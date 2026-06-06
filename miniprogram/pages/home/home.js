@@ -9,12 +9,7 @@ Page({
 	data: {
 		tab: 'login', // login / courses / activities / signin
 		typeDefine: ["拍照签到", "普通签到", "二维码签到", "手势签到", "位置签到", "签到码签到"],
-		swiperList: (config.swiperList || [
-			"/swiper/1.png",
-			"/swiper/2.png",
-			"/swiper/3.png",
-			"/swiper/4.png",
-		]).map(item => `https://testingcf.jsdelivr.net/gh/${config.repository}@main/resource${item}`),
+		swiperList: config.swiperList,
 		repository: config.repository,
 	},
 
