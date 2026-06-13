@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         超星网页助手
 // @namespace    http://tampermonkey.net/
-// @version      1.1.0
+// @version      1.1.1
 // @description  在 chaoxing 页面右上角添加按钮导入 JSON 格式 Cookie，仅主页面生效
 // @run-at       document-end
 // @match        https://passport2.chaoxing.com/login*
 // @match        https://i.chaoxing.com/*
-// @match        https://mobilelearn.chaoxing.com/page/sign/endSign*
+// @match        https://mobilelearn.chaoxing.com*
 // @match        https://sso.chaoxing.com/apis/login/userLogin4Uname.do?misaka-referer=*
 // @updateURL    https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MIniProgram/refs/heads/main/resource/油猴脚本/超星网页助手.js
 // @downloadURL  https://raw.githubusercontent.com/Misaka-1314/MisakaStudy-MIniProgram/refs/heads/main/resource/油猴脚本/超星网页助手.js
@@ -150,6 +150,28 @@ const getCookie = name => {
                     ul.innerHTML += btn(text, index);
             });
         },
-        rule: url => url.hostname === "mobilelearn.chaoxing.com",
+        rule: url => url.hostname === "mobilelearn.chaoxing.com" && url.pathname === "/page/sign/endSign",
+    });
+
+    createBtn({
+        text: "增强页面",
+        top: 240,
+        onclick: () => {
+            const processElement = element => {
+                if (element.style && element.style.display === 'none')
+                    element.style.display = '';
+                const children = element.children;
+                for (let i = 0; i < children.length; i++)
+                    processElement(children[i]);
+            }
+
+            setInterval(() => {
+                const elements = document.querySelectorAll('.btm-set-box');
+                elements.forEach(element => {
+                    processElement(element);
+                });
+            }, 1000);
+        },
+        rule: url => url.hostname === "mobilelearn.chaoxing.com" && url.pathname === "/page/active/activeList",
     });
 })();
