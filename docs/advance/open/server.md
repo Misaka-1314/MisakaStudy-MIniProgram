@@ -1,8 +1,9 @@
 # 反向代理服务部署教程
 
-> 微信小程序配置服务器域名 要求域名已备案
->
-> 自用无需备案，体验版开启调试模式即可
+:::tip
+微信小程序配置服务器域名 要求域名已备案
+自用无需备案，体验版开启调试模式即可
+:::
 
 ## 使用 边缘函数反代
 
@@ -11,18 +12,10 @@
 
 > 注意：Worker默认的域名已被墙，请自备域名；已知部分沿海城市阻断了CF的IP。
 
-[![使用 Cloudflare Workers 部署](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Misaka-1314/MisakaStudy-MIniProgram/tree/main/server/cloudflare)
+[![使用 Cloudflare Workers 部署](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Misaka-1314/MisakaStudy-MiniProgram/tree/main/server/cloudflare)
 
 请修改根目录为 `server/cloudflare`。
 如果部署有问题，请自行复制代码粘贴到 Cloudflare Workers！[去复制代码](https://github.com/Misaka-1314/MisakaStudy-MIniProgram/blob/main/server/cloudflare/_worker.js)
-:::
-
-::: details 使用腾讯云 EdgeOne Pages
-[![使用 腾讯云 EdgeOne Pages 部署](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?repository-url=https%3a%2f%2fgithub.com%2fMisaka-1314%2fChaoxing-MiniProgram%2ftree%2fmain%2fserver%2fedgeone&project-name=cx-proxy&repository-name=cx-proxy)
-:::
-
-::: details 使用腾讯云 EdgeOne 边缘函数
-请自行复制代码粘贴到 EdgeOne 边缘函数！[去复制代码](https://github.com/Misaka-1314/MisakaStudy-MIniProgram/blob/main/server/edgeone/_worker.js)
 :::
 
 ## 使用 Web 服务器反代
