@@ -308,14 +308,19 @@ onMounted(() => {
 
 <template>
   <NSpace vertical size="large">
-    <NInput v-model:value="keyword" round placeholder="输入完整 AppID，进行搜索" />
-    <NSpace size="small">
+    <NSpace size="small" align="center" style="width: 100%">
+      <NInput
+        v-model:value="keyword"
+        round
+        placeholder="输入完整 AppID，进行搜索"
+        style="flex: 1; min-width: 200px"
+      />
       <NSelect
         v-model:value="secretFilter"
         :options="secretOptions"
         placeholder="按 Secret 筛选"
         clearable
-        style="width: 160px"
+        style="width: 150px"
       />
       <NSelect
         v-model:value="versionFilter"
@@ -323,7 +328,7 @@ onMounted(() => {
         placeholder="按版本号筛选"
         clearable
         filterable
-        style="width: 200px"
+        style="width: 170px"
       />
     </NSpace>
     <NDataTable :loading="loading" :columns="columns" :data="filteredList" :pagination="pagination" remote />
