@@ -2,7 +2,7 @@
 import { ref, onMounted, h, reactive, computed, watch } from 'vue';
 import {
   NButton, NDataTable, useModal, NCode, NText, NInput, NTag,
-  NSpace, NSpin, useMessage, NCollapse, NCollapseItem, useThemeVars
+  NSpace, NSpin, useMessage, NCollapse, NCollapseItem, NSelect, useThemeVars
 } from 'naive-ui';
 
 const host = "https://task.micono.eu.org";
@@ -14,6 +14,18 @@ const list = ref([]);
 const loading = ref(false);
 const details = reactive({});
 const keyword = ref('');
+const secretFilter = ref('');
+const versionFilter = ref('');
+
+const secretOptions = [
+  { label: '已填写', value: 'filled' },
+  { label: '未填写', value: 'unfilled' },
+];
+
+const versionOptions = computed(() => {
+  const versions = [...new Set(list.value.map(item => item.version || '上传失败'))];
+  return versions.map(v => ({ label: v, value: v }));
+});
 
 const pagination = reactive({
   page: 1,
@@ -40,11 +52,29 @@ watch(() => pagination.pageSize, newVal => {
     keyword.value = "";
 })
 
+watch([secretFilter, versionFilter], () => {
+  pagination.page = 1;
+})
+
 const filteredList = computed(() => {
-  const filtered = list.value.filter(item => item.appid.includes(keyword.value));
+  let filtered = list.value.filter(item => item.appid.includes(keyword.value));
+
+  if (secretFilter.value) {
+    filtered = filtered.filter(item =>
+      secretFilter.value === 'filled' ? item.secret_status : !item.secret_status
+    );
+  }
+
+  if (versionFilter.value) {
+    filtered = filtered.filter(item => (item.version || '上传失败') === versionFilter.value);
+  }
+
   const start = (pagination.page - 1) * pagination.pageSize;
   const end = start + pagination.pageSize;
-  return filtered.slice(start, end);
+  return filtered.slice(start, end).map((item, index) => ({
+    ...item,
+    index: start + index + 1,
+  }));
 })
 
 const getFailReason = (data) => {
@@ -172,12 +202,8 @@ const columns = [
                       { label: '上传耗时', value: data.upload_duration ? `${data.upload_duration} 秒` : null },
                       { label: '下次重试时间', value: data.upload_locker_expire || null },
                       {
-                        label: '上传节点', value: h(NSpace, { size: 'small', align: 'center' }, {
-                          default: () => [
-                            h(NText, { type: 'default' }, { default: () => data.upload_node?.slice(0, 15) || '默认节点' }),
-                            h(NButton, { type: 'success', size: 'tiny', tertiary: true, onClick: () => window.open("/guide/vip#打赏作者") }, { default: () => '赞助节点' }),
-                          ]
-                        })
+                        label: '上传节点',
+                        value: h(NText, { type: 'default' }, { default: () => data.upload_node?.slice(0, 15) || '默认节点' }),
                       },
                       {
                         label: 'Secret',
@@ -244,10 +270,7 @@ const fetchListData = () => {
     .then(resp => resp.json())
     .then(res => {
       if (res.status === 0) {
-        list.value = res.data.tasks.map((item, index) => ({
-          ...item,
-          index: res.data.tasks.length - index,
-        }));
+        list.value = res.data.tasks;
         message.success('数据加载成功啦~♡');
       }
     })
@@ -286,6 +309,23 @@ onMounted(() => {
 <template>
   <NSpace vertical size="large">
     <NInput v-model:value="keyword" round placeholder="输入完整 AppID，进行搜索" />
+    <NSpace size="small">
+      <NSelect
+        v-model:value="secretFilter"
+        :options="secretOptions"
+        placeholder="按 Secret 筛选"
+        clearable
+        style="width: 160px"
+      />
+      <NSelect
+        v-model:value="versionFilter"
+        :options="versionOptions"
+        placeholder="按版本号筛选"
+        clearable
+        filterable
+        style="width: 200px"
+      />
+    </NSpace>
     <NDataTable :loading="loading" :columns="columns" :data="filteredList" :pagination="pagination" remote />
   </NSpace>
 </template>
