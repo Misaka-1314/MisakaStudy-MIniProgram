@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         微信小程序一键提审
 // @namespace    https://mp.weixin.qq.com/
-// @version      1.0.2
+// @version      1.0.3
 // @author       Misaka
 // @match        https://mp.weixin.qq.com/wxamp/*
 // @grant        GM_setValue
@@ -97,12 +97,15 @@ const getRemark = () => {
             .then((response) => response.json())
             .then((result) => {
                 const code_data = JSON.parse(result.code_data);
-                openid = code_data.online_info?.basic_info?.open_id || null;
-                if (!openid)
-                    openid =
-                        code_data.develop_info.info_list.filter(
-                            (i) => i.is_exper
-                        )[0]?.basic_info?.open_id || null;
+                const infoList = code_data.develop_info?.info_list || [];
+                const onlineOpenId =
+                    code_data.online_info?.basic_info?.open_id || null;
+                const onlineExists = infoList.some(
+                    (i) => i.basic_info?.open_id === onlineOpenId
+                );
+                openid = onlineExists
+                    ? onlineOpenId
+                    : infoList[0]?.basic_info?.open_id || null;
                 console.info("获取小程序版本", code_data, openid);
             })
             .then(() =>
