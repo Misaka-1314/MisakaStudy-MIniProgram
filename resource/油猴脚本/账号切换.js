@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         微信小程序快捷切换账号
 // @namespace    https://mp.weixin.qq.com/
-// @version      1.0.3
+// @version      1.0.4
 // @author       Misaka
 // @match        https://mp.weixin.qq.com/wxamp/*
 // @grant        none
@@ -16,16 +16,6 @@ const getQueryParam = (name) => {
     return match ? decodeURIComponent(match[1]) : null;
 };
 
-const toFormData = (obj) => Object.keys(obj)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(obj[key]))
-    .join("&");
-
-const 切换后跳转页面 = () => {
-    const token = getQueryParam("token");
-    const random = Math.random();
-    return `https://mp.weixin.qq.com/wxamp/wacodepage/getcodepage?token=${token}&lang=zh_CN&_=${random}`;
-};
-
 const 获取小程序列表 = () => {
     const random = Math.random();
     const token = getQueryParam("token");
@@ -35,11 +25,13 @@ const 获取小程序列表 = () => {
             .then(resp => resp.json())
             .then(res => {
                 console.info("获取小程序列表", res);
-                if (res.wax_list.length > 0)
-                    resolve(res.wax_list.filter(item => item.type == 1).filter(item => !item.app_name.includes("测试号")).slice(1));
+                const list = res.wax_list || res.wxa_list || [];
+                if (list.length > 0)
+                    resolve(list.filter(item => item.type == 1).filter(item => !item.app_name.includes("测试号")).slice(1));
                 else
                     resolve([])
             })
+            .catch(() => resolve([]))
     })
 }
 
@@ -51,14 +43,19 @@ const 切换账号 = (username) => {
         return;
     }
     console.info("找到账号元素", item);
+    sessionStorage.setItem("redirect_to_codepage", "1");
     item.click();
-    setTimeout(() => {
-        window.location.href = 切换后跳转页面();
-    }, 1500);
 }
 
 (async () => {
     "use strict";
+
+    if (sessionStorage.getItem("redirect_to_codepage")) {
+        sessionStorage.removeItem("redirect_to_codepage");
+        const token = getQueryParam("token");
+        window.location.href = `https://mp.weixin.qq.com/wxamp/wacodepage/getcodepage?token=${token}&lang=zh_CN&_=${Math.random()}`;
+        return;
+    }
 
     const 小程序列表 = await 获取小程序列表();
 
