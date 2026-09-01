@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         微信小程序快捷切换账号
 // @namespace    https://mp.weixin.qq.com/
-// @version      1.0.2
+// @version      1.0.3
 // @author       Misaka
 // @match        https://mp.weixin.qq.com/wxamp/*
 // @grant        none
@@ -20,7 +20,11 @@ const toFormData = (obj) => Object.keys(obj)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(obj[key]))
     .join("&");
 
-const 切换后跳转页面 = "https://mp.weixin.qq.com/wxamp/index/index?lang=zh_CN&token=9259533";
+const 切换后跳转页面 = () => {
+    const token = getQueryParam("token");
+    const random = Math.random();
+    return `https://mp.weixin.qq.com/wxamp/wacodepage/getcodepage?token=${token}&lang=zh_CN&_=${random}`;
+};
 
 const 获取小程序列表 = () => {
     const random = Math.random();
@@ -42,9 +46,15 @@ const 获取小程序列表 = () => {
 const 切换账号 = (username) => {
     const items = document.querySelectorAll(".account_item");
     const item = Array.from(items).find(item => item.querySelector(".account_email").innerText === username);
+    if (!item) {
+        alert(`未找到账号：${username}`);
+        return;
+    }
     console.info("找到账号元素", item);
     item.click();
-    window.location.href = 切换后跳转页面;
+    setTimeout(() => {
+        window.location.href = 切换后跳转页面();
+    }, 1500);
 }
 
 (async () => {
