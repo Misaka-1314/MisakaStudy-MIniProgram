@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         超星网页助手
 // @namespace    http://tampermonkey.net/
-// @version      1.1.1
+// @version      1.1.2
 // @description  在 chaoxing 页面右上角添加按钮导入 JSON 格式 Cookie，仅主页面生效
 // @run-at       document-end
 // @match        https://passport2.chaoxing.com/login*
@@ -88,11 +88,22 @@ const getCookie = name => {
             let data;
             try { data = JSON.parse(input); } catch { return alert("JSON 格式不正确"); }
 
+            const encodeCookieValue = v => {
+                const s = String(v ?? "");
+                let decoded = s;
+                try {
+                    decoded = decodeURIComponent(s);
+                } catch {
+                    // value 不是合法的 URL 编码串（例如含裸 %），按未编码原值处理
+                }
+                return encodeURIComponent(decoded);
+            };
+
             const domains = [".chaoxing.com", "sso.chaoxing.com", "passport2.chaoxing.com", "i.chaoxing.com"];
             domains.forEach(host => {
                 document.cookie = `xxtenc=; domain=${host}; path=/`;
                 for (const [k, v] of Object.entries(data)) {
-                    document.cookie = `${k}=${encodeURIComponent(decodeURIComponent(v))}; domain=${host}; path=/`;
+                    document.cookie = `${k}=${encodeCookieValue(v)}; domain=${host}; path=/`;
                 }
             });
 
