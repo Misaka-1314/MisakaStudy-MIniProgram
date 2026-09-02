@@ -15,7 +15,7 @@
 
 </div></center>
 
-<div align="center"><b>学习通快捷签到 自建微信小程序，签到如此简单！<a href="https://doc.micono.eu.org">阅读文档</a></b></div>
+<div align="center"><b>学习通快捷签到 自建微信小程序，签到如此简单！</b></div>
 
 ## ✨ 历程
 
@@ -141,12 +141,12 @@
     <tr>
         <td rowspan="2">部署教程</td>
         <td>服务端</td>
-        <td><a href="https://doc.micono.eu.org/advance/open/server">自行部署教程</a></td>
+        <td>自行部署教程</td>
         <td colspan="2">使用项目开发者的服务器</td>
     </tr>
     <tr>
         <td>小程序端</td>
-        <td><a href="https://doc.micono.eu.org/advance/open/develop">自行部署教程</a></td>
+        <td>自行部署教程</td>
         <td colspan="2">填写问卷并提供上传密钥</td>
     </tr>
     <tr>
@@ -167,4 +167,4 @@
 + CDN 加速和安全保护使用 [腾讯云 EdgeOne](https://edgeone.ai)
 + 代码上传服务器使用 [阿里云](https://www.alibabacloud.com)
 + 网页入口和文档站托管在 [腾讯云 EdgeOne Pages](https://pages.edgeone.ai)
-+ [服务状态实时监测](https://status.micono.eu.org) 使用 [Better Stack](https://betterstack.com)
++ 服务状态实时监测使用 [Better Stack](https://betterstack.com)
